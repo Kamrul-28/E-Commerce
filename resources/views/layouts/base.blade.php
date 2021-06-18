@@ -15,6 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/flexslider.css')}}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/favicon.ico')}}">
+	
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
