@@ -15,11 +15,13 @@ class SearchComponent extends Component
     public $search;
     public $product_cat;
     public $product_cat_id;
+    
 
     public function mount(){
         $this->sorting='default';
         $this->pagesize=12;
         $this->fill(request()->only('search','product_cat','product_cat_id'));
+        
     }
     
     public function store($product_id,$product_name,$product_price){
@@ -47,7 +49,6 @@ class SearchComponent extends Component
         }else{
             $products=Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->paginate($this->pagesize);
         }
-
         $categories=Category::all();
 
         return view('livewire.search-component',['products'=>$products,'categories'=>$categories])->layout('layouts.base');
