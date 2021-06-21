@@ -3,7 +3,12 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel panel-heading">
-                    All Categories
+                    <div class="row">
+                        <div class="col-md-6"><h4>All Categories</h4></div>
+                        <div class="col-md-6">
+                            <a href="{{ route('admin.addCategory')}}" class="btn btn-success pull-right">Add Category</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="panel panel-body">
                     <table class="table table-striped">
