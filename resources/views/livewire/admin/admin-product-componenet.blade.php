@@ -5,9 +5,9 @@
                 <div class="panel panel-heading">
                     <div class="row">
                         <div class="col-md-6"><h4>All Products</h4></div>
-                        {{-- <div class="col-md-6">
-                            <a href="{{ route('admin.addCategory')}}" class="btn btn-success pull-right">Add Category</a>
-                        </div> --}}
+                        <div class="col-md-6">
+                            <a href="{{ route('admin.addProduct')}}" class="btn btn-success pull-right">Add Product</a>
+                        </div>
                     </div>
                 </div>
                 <div class="panel panel-body">
