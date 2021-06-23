@@ -4,7 +4,7 @@
             <div class="panel panel-default">
                 <div class="panel panel-heading">
                     <div class="row">
-                        <div class="col-md-6"><h4>Add Category</h4></div>
+                        <div class="col-md-6"><h4>New Category</h4></div>
                         <div class="col-md-6">
                             <a href="{{ route('admin.categories')}}" class="btn btn-success pull-right">All Categories</a>
                         </div>
