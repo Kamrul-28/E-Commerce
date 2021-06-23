@@ -36,7 +36,7 @@
                                     <th>{{$product->category->name}}</th>
                                     <th>{{$product->created_at}}</th>
                                     <td>
-                                        <a href="{{ route('admin.editCategory',['category_slug'=>$product->name])}}"><i class="fa fa-edit fa-2x"></i></a>
+                                        <a href="{{ route('admin.editProduct',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x"></i></a>
                                        
                                         <a href="" wire:click.prevent="deleteCategory({{$product->id}})" style="margin-left:10px; "><i class="fa fa-times fa-2x text-danger"></i></a>
                                     </td>
