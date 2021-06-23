@@ -47,7 +47,7 @@
                         </tbody>
                     </table>
                     <div>
-                      {{-- {{$sliders->links("pagination::bootstrap-4")}} --}}
+                      {{$sliders->links("pagination::bootstrap-4")}}
                     </div>
                 </div>
             </div>
