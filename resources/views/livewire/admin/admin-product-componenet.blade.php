@@ -20,7 +20,8 @@
                             <th>Image</th>
                             <th>Name</th>
                             <th>Stock</th>
-                            <th>Price</th>
+                            <th>Regular Price</th>
+                            <th>Sale Price</th>
                             <th>Category</th>
                             <th>Date</th>
                             <th>Action</th> 
@@ -33,6 +34,7 @@
                                     <td>{{$product->name}}</td>
                                     <th>{{$product->stock_status}}</th>
                                     <th>{{$product->regular_price}}</th>
+                                    <th>{{$product->sale_price}}</th>
                                     <th>{{$product->category->name}}</th>
                                     <th>{{$product->created_at}}</th>
                                     <td>
