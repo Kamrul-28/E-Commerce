@@ -39,13 +39,13 @@
                     <div class="wrap-social">
                         <a class="link-socail" href="#"><img src="{{asset('assets/images/social-list.png')}}" alt=""></a>
                     </div>
-                    @if($product->sale_price>0)
-                    <div class="wrap-price"><span class="product-price">{{$product->sale_price}}</span></div>
+                    @if($product->sale_price>0  && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
+                         <div class="wrap-price"><span class="product-price">{{$product->sale_price}}</span></div>
                     @else
-                    <div class="wrap-price"><span class="product-price">{{$product->regular_price}}</span></div>
+                         <div class="wrap-price"><span class="product-price">{{$product->regular_price}}</span></div>
                     @endif
-                    <div class="stock-info in-stock">
-                        <p class="availability">Availability: <b>{{$product->stock_status}}</b></p>
+                         <div class="stock-info in-stock">
+                         <p class="availability">Availability: <b>{{$product->stock_status}}</b></p>
                     </div>
                     <div class="quantity">
                         <span>Quantity:</span>
