@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Category;
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class AdminAddCategory extends Component
 {
@@ -15,7 +16,23 @@ class AdminAddCategory extends Component
         $this->slug=Str::slug($this->name); 
     }
 
+    public function updated($fields){
+        $this->validateOnly($fields,
+            [
+                'name'=>'required',
+                'slug'=>'required|unique:categories'
+            ]
+            );
+    }
+
     public function storecategory(){
+
+        $this->validate(
+            [
+                'name'=>'required',
+                'slug'=>'required|unique:categories'
+            ]
+            );
         $category=new Category();
 
         $category->name=$this->name;
@@ -27,6 +44,6 @@ class AdminAddCategory extends Component
     }
     public function render()
     {
-        return view('livewire.admin.admin-edit-category')->layout('layouts.base');
+        return view('livewire.admin.admin-add-category')->layout('layouts.base');
     }
 }
