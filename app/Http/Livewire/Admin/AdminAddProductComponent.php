@@ -35,8 +35,40 @@ class AdminAddProductComponent extends Component
         $this->slug=Str::slug($this->name); 
     }
 
+    public function updated($fields){
+        $this->validateOnly($fields,
+            [
+                'name'=>'required',
+                'slug'=>'required|unique:categories',
+                'short_description'=>'required',
+                'description'=>'required',
+                'regular_price'=>'required|numeric',
+                'sale_price'=>'numeric',
+                'sku'=>'required',
+                'stock_status'=>'required',
+                'quantity'=>'required|numeric',
+                'image'=>'required|mimes:jpeg,png',
+            ]
+            );
+    }
+
     public function storeproduct(){
        
+        $this->validate(
+            [
+                'name'=>'required',
+                'slug'=>'required|unique:categories',
+                'short_description'=>'required',
+                'description'=>'required',
+                'regular_price'=>'required|numeric',
+                'sale_price'=>'numeric',
+                'sku'=>'required',
+                'stock_status'=>'required',
+                'quantity'=>'required|numeric',
+                'image'=>'required|mimes:jpeg,png',
+            ]
+            );
+
         $product=new Product();
 
         $product->name=$this->name;
